@@ -100,16 +100,16 @@ const Stats = () => {
       </div>
 
       {/* Time Filter */}
-      <div className="flex bg-gray-50 dark:bg-gray-800/50 p-1 rounded-2xl mb-8">
+      <div className="grid grid-cols-3 bg-gray-50 dark:bg-gray-800/50 p-1 rounded-2xl mb-8">
         {[7, 30, -1].map((f) => (
           <button
             key={f}
             onClick={() => setFilter(f as any)}
             className={clsx(
-              "flex-1 py-3 text-xs font-bold rounded-xl transition-all",
+              "py-3 text-xs font-bold rounded-xl transition-all text-center",
               filter === f 
                 ? "bg-white dark:bg-gray-800 text-sage shadow-sm" 
-                : "text-gray-400 dark:text-gray-500"
+                : "text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
             )}
           >
             {f === -1 ? 'All Time' : `${f} Days`}
