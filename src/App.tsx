@@ -23,14 +23,16 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 max-w-md mx-auto shadow-xl transition-colors duration-300">
-      <main className="flex-1 overflow-y-auto pb-20">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 max-w-md mx-auto shadow-xl transition-colors duration-300 relative border-x border-gray-100 dark:border-gray-800">
+      <main className="flex-1 overflow-y-auto pb-24">
         {currentPage === 'tasks' && <Dashboard />}
         {currentPage === 'stats' && <Stats />}
         {currentPage === 'profile' && <Profile />}
       </main>
       
-      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <div className="sticky bottom-0 w-full z-50">
+        <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      </div>
     </div>
   );
 }
