@@ -90,7 +90,7 @@ const Stats = () => {
   };
 
   return (
-    <div className="p-6 transition-colors duration-300">
+    <div className="transition-colors duration-300">
       <div className="flex items-center justify-between mb-8">
         <div>
           <h2 className="text-2xl font-bold text-gray-800 dark:text-white">Analytics</h2>

@@ -68,7 +68,7 @@ const Profile = () => {
   ];
 
   return (
-    <div className="p-6 transition-colors duration-300">
+    <div className="transition-colors duration-300">
       <div className="flex flex-col items-center mb-10 pt-4">
         <div className="w-24 h-24 bg-sage-light dark:bg-sage/10 rounded-[32px] flex items-center justify-center mb-4 relative shadow-inner">
           <User size={48} className="text-sage" />

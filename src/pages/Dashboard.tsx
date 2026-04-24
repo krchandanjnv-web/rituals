@@ -44,7 +44,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="p-6 transition-colors duration-300">
+    <div className="transition-colors duration-300">
       {/* Header with Progress Ring */}
       <div className="flex flex-col items-center mb-10">
         <div className="relative w-40 h-40 flex items-center justify-center">
