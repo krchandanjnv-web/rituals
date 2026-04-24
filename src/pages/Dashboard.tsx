@@ -85,20 +85,20 @@ const Dashboard = () => {
       </div>
 
       {/* Category Tabs */}
-      <div className="grid grid-cols-3 bg-gray-50 dark:bg-gray-800/50 p-1.5 rounded-2xl mb-8">
+      <div className="grid grid-cols-3 bg-gray-50 dark:bg-gray-800/50 p-1.5 rounded-2xl mb-8 w-full shadow-inner">
         {tabs.map(({ id, icon: Icon, label }) => (
           <button
             key={id}
             onClick={() => setActiveTab(id)}
             className={clsx(
-              "flex items-center justify-center gap-2 py-3 rounded-xl transition-all",
+              "flex items-center justify-center gap-2 py-3 rounded-xl transition-all w-full",
               activeTab === id 
-                ? "bg-white dark:bg-gray-800 text-sage shadow-sm font-bold" 
+                ? "bg-white dark:bg-gray-800 text-sage shadow-md font-bold" 
                 : "text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
             )}
           >
             <Icon size={16} />
-            <span className="text-xs">{label}</span>
+            <span className="text-xs font-bold">{label}</span>
           </button>
         ))}
       </div>
