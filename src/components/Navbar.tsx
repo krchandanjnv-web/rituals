@@ -15,18 +15,18 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
   ] as const;
 
   return (
-    <nav className="fixed bottom-0 w-full max-w-md bg-white border-t border-gray-100 px-6 py-3 flex justify-between items-center z-50">
+    <nav className="fixed bottom-0 w-full max-w-md bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 px-2 py-3 flex justify-around items-center z-50">
       {tabs.map(({ id, icon: Icon, label }) => (
         <button
           key={id}
           onClick={() => setCurrentPage(id)}
           className={clsx(
-            "flex flex-col items-center gap-1 transition-colors",
-            currentPage === id ? "text-sage" : "text-gray-400 hover:text-gray-600"
+            "flex-1 flex flex-col items-center gap-1 transition-colors py-1",
+            currentPage === id ? "text-sage" : "text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
           )}
         >
           <Icon size={24} />
-          <span className="text-xs font-medium">{label}</span>
+          <span className="text-[10px] sm:text-xs font-medium">{label}</span>
         </button>
       ))}
     </nav>

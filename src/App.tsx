@@ -23,7 +23,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white max-w-md mx-auto shadow-xl">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 max-w-md mx-auto shadow-xl transition-colors duration-300">
       <main className="flex-1 overflow-y-auto pb-20">
         {currentPage === 'tasks' && <Dashboard />}
         {currentPage === 'stats' && <Stats />}
